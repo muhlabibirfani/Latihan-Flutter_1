@@ -56,6 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text('Muhammad Labib Irfani - 3124521052'),
+            const Text('Nrp : 3124521052'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
