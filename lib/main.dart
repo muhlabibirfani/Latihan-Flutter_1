@@ -43,7 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter--;
     });
   }
-
+//
+void _resetCounter() {
+    setState(() {
+      _counter = 0;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,8 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Muhammad Labib Irfani - 3124521052'),
+            const Text('Muhammad Labib Irfani'),
             const Text('Nrp : 3124521052'),
+            const Text('You pressed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
@@ -77,6 +83,12 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: _incrementCounter,
             tooltip: 'Increment',
             child: const Icon(Icons.add),
+          ),
+          const SizedBox(width: 10),
+          FloatingActionButton(
+            onPressed: _resetCounter,
+            tooltip: 'Reset',
+            child: const Icon(Icons.refresh),
           ),
         ],
       ),
